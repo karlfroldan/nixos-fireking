@@ -1,0 +1,20 @@
+diff --git a/src/nm-pptp-service.c b/src/nm-pptp-service.c
+index 8865653..523ea00 100644
+--- a/src/nm-pptp-service.c
++++ b/src/nm-pptp-service.c
+@@ -346,6 +346,7 @@ nm_find_pppd (void)
+ {
+ 	static const char *pppd_binary_paths[] =
+ 		{
++			"@ppp@/sbin/pppd",
+ 			"/sbin/pppd",
+ 			"/usr/sbin/pppd",
+ 			"/usr/local/sbin/pppd",
+@@ -368,6 +369,7 @@ nm_find_pptp (void)
+ {
+ 	static const char *pptp_binary_paths[] =
+ 		{
++			"@pptp@/sbin/pptp",
+ 			"/sbin/pptp",
+ 			"/usr/sbin/pptp",
+ 			"/usr/local/sbin/pptp",
