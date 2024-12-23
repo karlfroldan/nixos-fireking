@@ -71,7 +71,7 @@ stdenv.mkDerivation rec {
   enableParallelBuilding = true;
 
   passthru = {
-    networkManagerPlugin = "VPN/nm-l2tp-service.name";
+    networkManagerPlugin = "VPN/nm-pptp-service.name";
   };
 
   meta = with lib; {
