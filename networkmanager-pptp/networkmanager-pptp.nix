@@ -18,17 +18,18 @@
   openssl,
   nss,
 }:
-
 stdenv.mkDerivation rec {
   name = "${pname}${lib.optionalString withGnome "-gnome"}-${version}";
-  pname = "NetworkManager-pptp";
+  pname = "networkmanager-pptp";
   version = "1.2.13-dev";
 
   src = fetchFromGitHub {
     owner = "NetworkManager";
     repo = "NetworkManager-pptp";
     rev = version;
-    hash = "sha256-10sbp2f6nidghlgmw2fq42xmc3nzhmx3r0wkbx5314p9jslbrdq6";
+    hash = "sha256-q0+x2EqjTNSjChlqc9YhJTCKH09F9+gHDxgU3Wn3QKU=";
+    # hash = "sha256-Bre8qJbpkjBKX5ODPHqF3w5WuyDYCV4fha9Fa5y4S4M=";
+    # hash = "sha256-10sbp2f6nidghlgmw2fq42xmc3nzhmx3r0wkbx5314p9jslbrdq6";
   };
 
   patches = [
